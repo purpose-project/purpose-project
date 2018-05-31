@@ -25,7 +25,29 @@
     color: white;
     position: absolute;
     left: 50%;
-    top: 7%;
+    top: 9%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  h2 {
+    font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    color: black;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  h3 {
+    font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    color: black;
+    position: absolute;
+    left: 50%;
+    top: 20%;
     transform: translateX(-50%);
     white-space: nowrap;
   }
@@ -41,11 +63,19 @@
     white-space: nowrap;
   }
   
+  textarea {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
   .button {
     display: block;
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 75%;
     height: 2.5rem;
     padding-top: 1rem;
     width: 15rem;
@@ -109,19 +139,6 @@
     transition: var(--speed) all ease-in-out;
   }
   
-  /* .hover-left .left {
-    width: var(--hover-width);
-  } */
-  
-  /* .hover-left .right {
-    width: var(--other-width);
-  } */
-  
-  /* .hover-left .right:before {
-    z-index: 2;
-  } */
-  
-  
   .hover-right .right {
     width: 100%;
   }
@@ -129,10 +146,6 @@
   .hover-right .left {
     width: 100%;
   }
-  
-  /* .hover-right .left:before {
-    z-index: 2;
-  } */
   
   @media(min-width: 1000px) {
     .split {
@@ -154,12 +167,25 @@
     font-size: 4rem;
     top: 20%;
     }
+    h2 {
+    font-size: 1.7rem;
+    top: 13%;
+    }
+    h3 {
+    font-size: 1.2rem;
+    }
     p {
     font-size: 1.2rem;
     top: 20%;
     }
+    textarea {
+    top: 41%;
+    }
     .button {
     top: 43%;
+    }
+    .next {
+    top: 62%;
     }
   } 
   
