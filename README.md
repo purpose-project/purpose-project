@@ -1,4 +1,5 @@
-# Empty
+# Purpose Project
+Goal-setting tool and advice for living with purpose and accomplishing more.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
 
