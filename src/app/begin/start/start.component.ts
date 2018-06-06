@@ -27,7 +27,7 @@ export class StartComponent implements OnInit {
     this.getStep();
   }
 
-  getStep(): void {
+  private getStep(): void {
     this.step$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
         this.service.getStep(params.get('id')))
