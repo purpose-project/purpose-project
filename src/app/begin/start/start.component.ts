@@ -15,9 +15,7 @@ import { Command } from 'protractor';
 })
 export class StartComponent implements OnInit {
 
-  currentId = 0;
-
-  step: Step;
+  step$: Observable<Step>;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,14 +24,13 @@ export class StartComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.getStep(this.currentId);
+    this.getStep();
   }
 
-  getStep(id: number): void {
-    console.log('Get getting-started/' + id + '...');
-
-    this.service.getStep(id)
-      .subscribe(step => this.step = step);
+  getStep(): void {
+    this.step$ = this.route.paramMap.pipe(
+      switchMap((params: ParamMap) =>
+        this.service.getStep(params.get('id')))
+    );
   }
-
 }

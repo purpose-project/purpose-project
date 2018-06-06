@@ -7,7 +7,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 
 
 const beginRoutes: Routes = [
-  { path: 'getting-started', component: StartComponent },
+  { path: 'getting-started/:id', component: StartComponent },
   { path: 'welcome',         component: WelcomeComponent },
 ];
 
