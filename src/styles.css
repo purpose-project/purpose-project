@@ -7,8 +7,6 @@
   --left-bg-color: rgba(150, 255, 255, 0.5);
   --right-bg-color: white;
   --right-button-hover-color: rgba(100, 150, 150, 0.5);
-  --hover-width: 67%;
-  --other-width: 33%;
   --speed: 1000ms;
 }
 
