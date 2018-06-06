@@ -1,0 +1,6 @@
+<div *ngIf="step$ | async as step">
+  <h2>{{step.header}}</h2>
+  <h3>{{step.description}}</h3>
+  <textarea rows="10" cols="49">Write here or in a journal, whichever you prefer.</textarea>
+  <a *ngIf="step.nextStep" class="button next" routerLink="/getting-started/{{step.nextStep}}">Next</a>
+</div>
