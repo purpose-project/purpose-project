@@ -11,13 +11,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { BeginModule } from './begin/begin.module';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent,
-    SidebarComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
