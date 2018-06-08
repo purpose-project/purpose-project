@@ -2,7 +2,11 @@
   <div class="split left">
       <mat-sidenav-container>
           <mat-sidenav #sidenav>
-              Sidenav Content
+              <nav>
+                <a mat-button routerLink="/blog" routerLinkActive="active">Blog</a>
+                <a mat-button routerLink="/about" routerLinkActive="active">About</a>
+            </nav>
+              
           </mat-sidenav>
           <mat-sidenav-content>
               <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
