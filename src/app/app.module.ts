@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +21,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatSidenavModule,
     BeginModule,
     AppRoutingModule
   ],

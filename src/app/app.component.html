@@ -1,6 +1,13 @@
 <div class="container">
   <div class="split left">
-      <h1>PURPOSE <br>PROJECT</h1>
+      <mat-sidenav-container>
+          <mat-sidenav #sidenav>
+              Sidenav Content
+          </mat-sidenav>
+          <mat-sidenav-content>
+              <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
+          </mat-sidenav-content>
+      </mat-sidenav-container>
   </div>
   <div class="split right">
       <router-outlet></router-outlet>
