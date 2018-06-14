@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageTitleService } from '../../page-title.service';
 
 @Component({
   selector: 'app-welcome',
@@ -8,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class WelcomeComponent implements OnInit {
   currentStep = 0;
 
-  constructor() { }
+  constructor(private pageTitleService: PageTitleService) { }
 
   ngOnInit() {
+    this.pageTitleService.setTitle('Welcome');
   }
 
 }

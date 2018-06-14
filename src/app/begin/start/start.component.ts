@@ -6,7 +6,7 @@ import { switchMap } from 'rxjs/operators';
 
 import { StepService } from './service/step.service';
 import { Step } from './service/step';
-import { Command } from 'protractor';
+import { PageTitleService } from '../../page-title.service';
 
 @Component({
   providers: [StepService],
@@ -20,17 +20,19 @@ export class StartComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private service: StepService
+    private stepService: StepService,
+    private pageTitleService: PageTitleService
   ) { }
 
   ngOnInit() {
     this.getStep();
+    this.pageTitleService.setTitle('Find your purpose');
   }
 
   private getStep(): void {
     this.step$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
-        this.service.getStep(params.get('id')))
+        this.stepService.getStep(params.get('id')))
     );
   }
 }
