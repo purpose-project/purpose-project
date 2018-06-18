@@ -1,7 +1,7 @@
 <div class="container">
   <div class="split left">
     <mat-sidenav-container>
-      <mat-sidenav #sidenav>
+      <mat-sidenav #sidenav [fixedInViewport]="true">
         <nav>
           <a mat-button routerLink="/blog" routerLinkActive="active">Blog</a>
           <a mat-button routerLink="/about" routerLinkActive="active">About</a>
@@ -9,7 +9,10 @@
 
       </mat-sidenav>
       <mat-sidenav-content>
-        <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
+        <mat-toolbar>
+          <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
+          <h4>PURPOSE PROJECT</h4>
+        </mat-toolbar>
         <h1>{{ pageTitle$ | async }}</h1>
       </mat-sidenav-content>
     </mat-sidenav-container>
