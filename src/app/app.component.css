@@ -1,0 +1,9 @@
+mat-sidenav-container {
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 64px; /* better way to set this? */
+}

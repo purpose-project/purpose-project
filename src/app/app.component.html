@@ -1,8 +1,23 @@
 <div class="container">
   <div class="split left">
-      <h1>PURPOSE <br>PROJECT</h1>
+    <mat-sidenav-container>
+      <mat-sidenav #sidenav [fixedInViewport]="true">
+        <nav>
+          <a mat-button routerLink="/blog" routerLinkActive="active">Blog</a>
+          <a mat-button routerLink="/about" routerLinkActive="active">About</a>
+        </nav>
+
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <mat-toolbar>
+          <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
+          <h4>PURPOSE PROJECT</h4>
+        </mat-toolbar>
+        <h1>{{ pageTitle$ | async }}</h1>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
   </div>
   <div class="split right">
-      <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
   </div>
 </div>
