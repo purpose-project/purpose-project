@@ -10,8 +10,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BeginModule } from './begin/begin.module';
+import { BlogModule } from './blog/blog.module';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatButtonModule,
     MatSidenavModule,
     BeginModule,
-    AppRoutingModule
+    BlogModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
