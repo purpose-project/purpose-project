@@ -64,17 +64,7 @@ html, body {
   flex-direction: column;
   flex: 1;
   font-family: Barlow, Arial, sans-serif;
-  color: #313131;
-  position: relative;
-  padding-top: 5rem;
-  height: 100%;
-}
-
-.right-content {
-  display: flex;
-  flex-direction: column;
   margin: auto;
-  width: 75%;
   align-items: center;
   text-align: center;
 }
