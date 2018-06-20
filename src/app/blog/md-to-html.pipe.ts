@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import * as marked from 'marked';
+import { Marked, Renderer } from 'marked-ts';
 
 @Pipe({
   name: 'mdToHtml'
@@ -11,7 +11,15 @@ export class MdToHtmlPipe implements PipeTransform {
     return this.markdownToHtml(value);
   }
 
-  private markdownToHtml(md: string) {
-    return marked(md);
+  private markdownToHtml(md: string): string {
+    Marked.setOptions({renderer: new BlogPostMdRenderer});
+    return Marked.parse(md);
+  }
+}
+
+class BlogPostMdRenderer extends Renderer {
+  heading(text: string, level: number, raw: string): string {
+    const htmlClass = 'blog-h' + level;
+    return `<h${level} class="${htmlClass}">${text}</h${level}>\n`;
   }
 }
