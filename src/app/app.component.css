@@ -7,6 +7,9 @@ nav {
   display: flex;
   flex-direction: column;
   margin-top: 64px; /* better way to set this? */
+  font-family: Comfortaa, Arial, sans-serif;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Left side */
@@ -41,8 +44,4 @@ nav {
 .container > .right {
   margin: auto;
   text-align: center;
-}
-
-p {
-  width: 60%;
 }
