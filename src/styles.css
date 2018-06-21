@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Barlow|Comfortaa');
 
-/* General */
 html, body {
   height: 100%;
   line-height: 1.5;
@@ -23,31 +22,19 @@ html, body {
 .title {
   font-family: Comfortaa, Arial, sans-serif;
   color: #fff;
+  padding-left: .5em;
 }
 
-/* Left side */
-.container > .left {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+.material-icons {
   color: #fff;
-  background-size: cover;
-  background-position: center;
-  flex: 1;
-  font-family: Comfortaa, Arial, sans-serif;
-  min-height: 300px;
+  padding-left: .5em;
+  padding-bottom: .1em;
 }
 
-/* Right side */
-.container > .right {
-  flex: 1;
-  font-family: Barlow, Arial, sans-serif;
-}
-
-p {
+.welcome-message {
   width: 75%;
   margin: auto;
-  padding: 2em;;
+  padding: 1em;;
 }
 
 .button {
@@ -67,6 +54,10 @@ p {
 
 .button:hover {
   background-color: #E8E8E8;
+}
+
+.next {
+  margin-top: 1em;
 }
 
 /* Media queries */
