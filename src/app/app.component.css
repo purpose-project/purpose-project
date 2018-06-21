@@ -3,6 +3,11 @@ mat-sidenav-container {
   height: 100%;
 }
 
+mat-sidenav {
+  width: 50%;
+  background: black;
+}
+
 nav {
   display: flex;
   flex-direction: column;
@@ -57,6 +62,8 @@ nav {
   font-family: Barlow, Arial, sans-serif;
 }
 
-.text-box {
-  padding-bottom: 10em;
+@media (max-width: 768px) {
+  mat-sidenav {
+    width: 80%;
+  }
 }
