@@ -8,38 +8,8 @@ html, body {
   margin: auto;
 }
 
-.container {
-  display: flex;
-  height: 100%;
-  overflow: hidden;
-}
-
-.toolbar {
-  position: fixed;
-  z-index: 1000;
-}
-
-.title {
-  font-family: Comfortaa, Arial, sans-serif;
-  color: #fff;
-  padding-left: .5em;
-}
-
-.material-icons {
-  color: #fff;
-  padding-left: .5em;
-  padding-bottom: .1em;
-}
-
 .welcome-message {
   width: 75%;
   margin: auto;
   padding: 1em;;
-}
-
-/* Media queries */
-@media(max-width: 768px) {
-  .container {
-  flex-direction: column;
-  }
 }

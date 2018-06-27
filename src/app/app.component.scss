@@ -1,3 +1,20 @@
+.container {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.toolbar {
+  position: fixed;
+  z-index: 1000;
+}
+
+.material-icons {
+  color: #fff;
+  padding-left: .5em;
+  padding-bottom: .1em;
+}
+
 /* Side nav */
 mat-sidenav-container {
   height: 100%;
@@ -31,6 +48,12 @@ nav {
   min-height: 300px;
 }
 
+.title {
+  font-family: Comfortaa, Arial, sans-serif;
+  color: #fff;
+  padding-left: .5em;
+}
+
 .main-message {
   font-size: 4em;
   margin-left: .6em;
@@ -60,6 +83,13 @@ nav {
   text-align: center;
   flex: 1;
   font-family: Barlow, Arial, sans-serif;
+}
+
+/* Media queries */
+@media(max-width: 768px) {
+  .container {
+  flex-direction: column;
+  }
 }
 
 @media (max-width: 768px) {
