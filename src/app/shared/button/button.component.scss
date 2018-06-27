@@ -1,4 +1,4 @@
-button {
+:host {
   display: flex;
   justify-content: center;
   border: black solid 0.2rem;
@@ -13,6 +13,6 @@ button {
   margin: auto;
 }
 
-button:hover {
+:host:hover {
   background-color: #E8E8E8;
 }
