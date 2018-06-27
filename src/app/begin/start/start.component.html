@@ -2,5 +2,5 @@
   <h2>{{step.header}}</h2>
   <p class="welcome-message">{{step.description}}</p>
   <textarea rows="10" cols="49">Write here or in a journal, whichever you prefer.</textarea>
-  <a appButton *ngIf="step.nextStep" class="button" routerLink="/getting-started/{{step.nextStep}}">Next</a>
+  <a appButton *ngIf="step.nextStep" routerLink="/getting-started/{{step.nextStep}}">Next</a>
 </div>
