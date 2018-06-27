@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+import { BeginRoutingModule } from './begin-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 import { StartComponent } from './start/start.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
-import { BeginRoutingModule } from './begin-routing.module';
-
-
-
 @NgModule({
   imports: [
-    CommonModule,
-    BeginRoutingModule
+    BeginRoutingModule,
+    SharedModule
   ],
   declarations: [
     WelcomeComponent,
