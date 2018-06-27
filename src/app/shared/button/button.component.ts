@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -6,14 +6,8 @@ import { Component, OnInit, ElementRef } from '@angular/core';
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent {
 
-  constructor(private elementRef: ElementRef) {
-    // Add the correct corresponding class.
-    (elementRef.nativeElement as HTMLElement).classList.add('appButton');
-  }
-
-  ngOnInit() {
-  }
+  constructor() { }
 
 }
