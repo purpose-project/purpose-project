@@ -5,9 +5,11 @@
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav [fixedInViewport]="true">
-    <nav>
-      <a mat-button routerLink="/blog" routerLinkActive="active">Blog</a>
-      <a mat-button routerLink="/about" routerLinkActive="active">About</a>
+    <nav id="primary-nav">
+      <ul>
+        <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+      </ul>
     </nav>
 
   </mat-sidenav>

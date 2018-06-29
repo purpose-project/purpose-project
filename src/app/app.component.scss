@@ -15,23 +15,38 @@
   padding-bottom: .1em;
 }
 
-/* Side nav */
 mat-sidenav-container {
   height: 100%;
 }
 
+/* Side nav */
 mat-sidenav {
   width: 50%;
   background: black;
+  padding: 64px 1em 1em;
 }
 
-nav {
-  display: flex;
-  flex-direction: column;
-  margin-top: 64px; /* better way to set this? */
+mat-sidenav > nav {
   font-family: Comfortaa, Arial, sans-serif;
-  color: #fff;
+}
+
+#primary-nav {
+  font-size: 2.4rem;
+}
+
+/* List of links in sidenav */
+mat-sidenav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Links inside sidenav */
+mat-sidenav a {
   text-decoration: none;
+  color: #fff;
 }
 
 /* Left side */
