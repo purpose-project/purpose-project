@@ -5,7 +5,7 @@ import { PageTitleService } from '../../page-title.service';
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.css']
+  styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
 
