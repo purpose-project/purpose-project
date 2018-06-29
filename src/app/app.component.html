@@ -1,54 +1,62 @@
-<mat-toolbar class="toolbar">
-  <i class="material-icons" (click)="sidenav.toggle()" color="basic">menu</i> 
-  <h4 class="title">PURPOSE PROJECT</h4>
-</mat-toolbar>
+<div class="app-container">
+  <mat-toolbar class="toolbar">
+    <button mat-icon-button>
+      <mat-icon aria-label="menu icon" (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <h4 class="title">PURPOSE PROJECT</h4>
+  </mat-toolbar>
 
-<mat-sidenav-container>
-  <mat-sidenav #sidenav [fixedInViewport]="true">
-    <nav id="primary-nav">
-      <ul>
-        <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
-        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-      </ul>
-    </nav>
-
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <div class="container">
-      <div class="left">
-        <h1 class="main-message">{{ pageTitle$ | async }}</h1>
-        <ul class="social-media">
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav [fixedInViewport]="true">
+      <nav id="primary-nav">
+        <ul>
           <li>
-            <a href="https://www.twitter.com" target="_blank">
-              <i class="fab fa-twitter"></i>
-            </a>
+            <a routerLink="/blog" routerLinkActive="active">Blog</a>
           </li>
           <li>
-            <a href="https://www.facebook.com" target="_blank">
-              <i class="fab fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://plus.google.com/discover" target="_blank">
-              <i class="fab fa-google-plus-g"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.pinterest.com" target="_blank">
-              <i class="fab fa-pinterest"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.skype.com" targe="_blank">
-              <i class="fab fa-skype"></i>
-            </a>
+            <a routerLink="/about" routerLinkActive="active">About</a>
           </li>
         </ul>
-      </div>
-      <div class="right">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
+      </nav>
 
-  </mat-sidenav-content>
-</mat-sidenav-container>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="container">
+        <div class="left">
+          <h1 class="main-message">{{ pageTitle$ | async }}</h1>
+          <ul class="social-media">
+            <li>
+              <a href="https://www.twitter.com" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://plus.google.com/discover" target="_blank">
+                <i class="fab fa-google-plus-g"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.pinterest.com" target="_blank">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.skype.com" targe="_blank">
+                <i class="fab fa-skype"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

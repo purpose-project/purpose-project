@@ -1,3 +1,8 @@
+.app-container {
+  font-family: Comfortaa, Arial, sans-serif;
+  height: 100%;
+}
+
 .container {
   display: flex;
   height: 100%;
@@ -7,12 +12,8 @@
 .toolbar {
   position: fixed;
   z-index: 1000;
-}
-
-.material-icons {
+  background-color: transparent;
   color: #fff;
-  padding-left: .5em;
-  padding-bottom: .1em;
 }
 
 mat-sidenav-container {
@@ -26,10 +27,6 @@ mat-sidenav {
   padding: 64px 1em 1em;
 }
 
-mat-sidenav > nav {
-  font-family: Comfortaa, Arial, sans-serif;
-}
-
 #primary-nav {
   font-size: 2.4rem;
 }
@@ -40,8 +37,6 @@ mat-sidenav ul {
   margin: 0;
   padding: 0;
 }
-
-
 
 /* Links inside sidenav */
 mat-sidenav a {
@@ -59,14 +54,7 @@ mat-sidenav a {
   background-size: cover;
   background-position: center;
   flex: 1;
-  font-family: Comfortaa, Arial, sans-serif;
   min-height: 300px;
-}
-
-.title {
-  font-family: Comfortaa, Arial, sans-serif;
-  color: #fff;
-  padding-left: .5em;
 }
 
 .main-message {
