@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   declarations: [
     ButtonComponent
@@ -17,6 +18,7 @@ import { ButtonComponent } from './button/button.component';
     CommonModule,
     FormsModule,
     MatButtonModule,
+    MatIconModule,
     ButtonComponent
   ]
 })
