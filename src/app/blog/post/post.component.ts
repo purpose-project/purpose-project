@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
+import { PageTitleService } from '../../page-title.service';
 import { ContentfulService } from '../../contentful.service';
 
 @Component({
@@ -13,12 +14,16 @@ export class PostComponent implements OnInit {
 
   post$: Observable<any>;
 
-  constructor(private contentful: ContentfulService) { }
+  constructor(
+    private titleService: PageTitleService,
+    private contentful: ContentfulService
+  ) { }
 
   ngOnInit() {
     this.contentful.logContent('4d1s24xc6QAK8cyeMiQs2c');
 
     this.post$ = this.contentful.getContent('4d1s24xc6QAK8cyeMiQs2c');
+    this.post$.subscribe(post => this.titleService.setTitle(post.title));
   }
 
 }
