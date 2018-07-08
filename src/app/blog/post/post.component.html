@@ -1,3 +1,6 @@
 <div *ngIf="post$ | async as post">
-  <div [innerHtml]="post.body | mdToHtml"></div>
+    <h1>{{post.title ? post.title.rendered : "..."}}</h1>
+    <div [innerHtml]="post.content.rendered" *ngIf="post.content"></div>
+    <p *ngIf="post.date">{{post.date | date:'longDate'}}</p>
+  <!-- <div [innerHtml]="post.body | mdToHtml"></div> -->
 </div>
