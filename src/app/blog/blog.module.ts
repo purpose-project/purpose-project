@@ -8,6 +8,7 @@ import { BlogComponent } from './blog/blog.component';
 import { CategoryComponent } from './category/category.component';
 import { PostComponent } from './post/post.component';
 import { MdToHtmlPipe } from './md-to-html.pipe';
+import { PostCardComponent } from '../blog/post-card/post-card.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { MdToHtmlPipe } from './md-to-html.pipe';
     BlogComponent,
     CategoryComponent,
     PostComponent,
-    MdToHtmlPipe
+    MdToHtmlPipe,
+    PostCardComponent
   ]
 })
 export class BlogModule { }
