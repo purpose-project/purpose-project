@@ -25,8 +25,13 @@ export class ContentfulService {
       .then((entry) => console.log(entry));
   }
 
-  getContent(contentId: string): Observable<any> {
-    const promise = this.client.getEntry(contentId);
-    return from(promise).pipe(map(entry => entry.fields));
+  getContent(query?: any): Observable<any> {
+    let promise;
+    if (query) {
+      promise = this.client.getEntries(query);
+    } else {
+      promise = this.client.getEntries();
+    }
+    return from<any>(promise).pipe(map(res => res.items));
   }
 }

@@ -13,10 +13,9 @@ import { Post } from '../post';
 export class CategoryComponent implements OnInit {
 
   constructor(private postService: PostService) { }
-  posts$: Observable<any>;
+  posts$: Observable<Post[]>;
 
   ngOnInit() {
     this.posts$ = this.postService.getPosts();
-    this.posts$.subscribe(res => console.log(res));
   }
 }
