@@ -19,13 +19,7 @@ export class ContentfulService {
 
   constructor() { }
 
-  // console logs a repsonse for debugging
-  logContent(contentId: string) {
-    this.client.getEntry(contentId)
-      .then((entry) => console.log(entry));
-  }
-
-  getContent(query?: any): Observable<any> {
+  getEntries(query?: any): Observable<any> {
     let promise;
     if (query) {
       promise = this.client.getEntries(query);
@@ -33,5 +27,10 @@ export class ContentfulService {
       promise = this.client.getEntries();
     }
     return from<any>(promise).pipe(map(res => res.items));
+  }
+
+  getEntry(id: string): Observable<any> {
+    const promise = this.client.getEntry(id);
+    return from<any>(promise);
   }
 }

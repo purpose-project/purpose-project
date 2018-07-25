@@ -18,7 +18,7 @@ export class PostService {
 
   public getPosts(): Observable<Post[]> {
     return new Observable<Post[]>(observer => {
-      this.contentful.getContent({content_type: 'post'}).subscribe(
+      this.contentful.getEntries({content_type: 'post'}).subscribe(
         response => {
           if (response) {
             observer.next(response as Post[]);
@@ -35,6 +35,20 @@ export class PostService {
   }
 
   public getPost(id: string): Observable<Post> {
-    return this.contentful.getContent(id);
+    return new Observable<Post>(observer => {
+      this.contentful.getEntry(id).subscribe(
+        response => {
+          if (response) {
+            observer.next(response as Post);
+            observer.complete();
+          } else {
+            observer.error(response);
+          }
+        },
+        error => {
+          observer.error(error);
+        }
+      );
+    });
   }
 }

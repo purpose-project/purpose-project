@@ -21,23 +21,17 @@ export class PostComponent implements OnInit {
   constructor(
     private titleService: PageTitleService,
     private route: ActivatedRoute,
-    private postService: PostService,
-    private contentful: ContentfulService
+    private postService: PostService
   ) { }
 
   ngOnInit() {
     this.post$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
-        this.postService.getPost(params.get('slug')))
+        this.postService.getPost(params.get('id')))
     );
 
-    // this.contentful.logContent('4d1s24xc6QAK8cyeMiQs2c');
-
-    // this.post$ = this.contentful.getContent('4d1s24xc6QAK8cyeMiQs2c');
     this.post$.subscribe(post => {
-      console.log(post);
-      this.titleService.setTitle(post.title);
-
+      this.titleService.setTitle(post.fields.title);
     });
   }
 
