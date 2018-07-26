@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { Post } from '../post';
 
 @Component({
   selector: 'app-post-card',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostCardComponent implements OnInit {
 
+  @Input() post: Post;
+  author: any;
+  portrait: any;
+  backgroundImage: any;
+  headerImage: {
+    [key: string]: string;
+  };
+
   constructor() { }
 
   ngOnInit() {
+    this.author = this.post.fields.author[0];
+    this.portrait = this.author.fields.portrait;
+    this.backgroundImage = this.post.fields.backgroundImage;
+    this.headerImage = {
+      'background-image': 'url(' + this.portrait.fields.file.url + ')',
+      'background-size': 'cover'
+    };
   }
 
 }

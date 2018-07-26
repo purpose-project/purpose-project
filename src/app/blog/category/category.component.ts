@@ -17,5 +17,6 @@ export class CategoryComponent implements OnInit {
 
   ngOnInit() {
     this.posts$ = this.postService.getPosts();
+    this.posts$.subscribe(res => console.log(res));
   }
 }

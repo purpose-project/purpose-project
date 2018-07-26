@@ -1,10 +1,10 @@
 <mat-card class="post-card">
   <mat-card-header class="post-header">
-    <div mat-card-avatar></div>
-    <mat-card-title>Post Title</mat-card-title>
-    <mat-card-subtitle>Post Author</mat-card-subtitle>
+    <div mat-card-avatar [ngStyle]="headerImage"></div>
+    <mat-card-title>{{post.fields.title}}</mat-card-title>
+    <mat-card-subtitle>{{author.fields.name}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <img mat-card-image [src]="backgroundImage.fields.file.url" alt="Photo of a Shiba Inu">
   <mat-card-content>
     <p>
       Preview for the post, so you know what you might read soon.

@@ -3,6 +3,8 @@ export interface Post {
     title: string;
     body: string;
     slug: string;
+    author: any[];
+    [property: string]: any;
   };
 
   sys: {
