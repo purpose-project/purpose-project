@@ -1,8 +1,6 @@
 <ul *ngIf="posts$ | async as posts">
   <li *ngFor="let post of posts">
-    <a [routerLink]="['/post', post.sys.id]">
-      <app-post-card [post]="post"></app-post-card>
-    </a>
+    <app-post-card [post]="post"></app-post-card>
   </li>
 </ul>
 
