@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, from } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import * as contentful from 'contentful';
+import { createClient, Entry, EntryCollection } from 'contentful';
 
 import { environment } from '../environments/environment';
 
@@ -12,25 +12,25 @@ import { environment } from '../environments/environment';
 })
 export class ContentfulService {
 
-  private client = contentful.createClient({
+  private client = createClient({
     space: environment.contentful.spaceId,
     accessToken: environment.contentful.token
   });
 
   constructor() { }
 
-  getEntries(query?: any): Observable<any> {
+  getEntries(query?: any): Observable<Entry<any>[]> {
     let promise;
     if (query) {
       promise = this.client.getEntries(query);
     } else {
       promise = this.client.getEntries();
     }
-    return from<any>(promise).pipe(map(res => res.items));
+    return from<EntryCollection<any>>(promise).pipe(map(res => res.items));
   }
 
-  getEntry(id: string): Observable<any> {
+  getEntry(id: string): Observable<Entry<any>> {
     const promise = this.client.getEntry(id);
-    return from<any>(promise);
+    return from<Entry<any>>(promise);
   }
 }

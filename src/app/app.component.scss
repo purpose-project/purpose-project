@@ -47,12 +47,12 @@ mat-sidenav a {
 /* Left side */
 .container > .left {
   background: url("https://source.unsplash.com/gD7KrKqYZFk/1600x900"), rgb(69, 69, 117);
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   color: #fff;
-  background-size: cover;
-  background-position: center;
   flex: 1;
   min-height: 300px;
 }

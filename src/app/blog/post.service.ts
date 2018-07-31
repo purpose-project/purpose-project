@@ -3,11 +3,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { elementAt, map } from 'rxjs/operators';
 
+import { Entry } from 'contentful';
+
 import { ContentfulService } from '../contentful.service';
 
 import { Post } from './post';
 
-const endpoint = 'https://public-api.wordpress.com/rest/v1.1/sites/seanandchristina.blog';
 
 @Injectable()
 export class PostService {
@@ -16,12 +17,12 @@ export class PostService {
     private contentful: ContentfulService
   ) { }
 
-  public getPosts(): Observable<Post[]> {
-    return new Observable<Post[]>(observer => {
+  public getPosts(): Observable<Entry<Post>[]> {
+    return new Observable<Entry<Post>[]>(observer => {
       this.contentful.getEntries({content_type: 'post'}).subscribe(
         response => {
           if (response) {
-            observer.next(response as Post[]);
+            observer.next(response as Entry<Post>[]);
             observer.complete();
           } else {
             observer.error(response);
@@ -34,12 +35,16 @@ export class PostService {
     });
   }
 
-  public getPost(id: string): Observable<Post> {
-    return new Observable<Post>(observer => {
-      this.contentful.getEntry(id).subscribe(
+  public getPost(slug: string): Observable<Entry<Post>> {
+    const query = {
+      content_type: 'post',
+      'fields.slug': slug
+    };
+    return new Observable<Entry<Post>>(observer => {
+      this.contentful.getEntries(query).subscribe(
         response => {
           if (response) {
-            observer.next(response as Post);
+            observer.next(response[0] as Entry<Post>);
             observer.complete();
           } else {
             observer.error(response);

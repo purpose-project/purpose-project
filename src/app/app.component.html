@@ -22,7 +22,7 @@
     </mat-sidenav>
     <mat-sidenav-content>
       <div class="container">
-        <div class="left">
+        <div class="left" [ngStyle]="{'background-image': 'url(' + (backgroundImageUrl$ | async) + ')'}">
           <h1 class="main-message">{{ pageTitle$ | async }}</h1>
           <ul class="social-media">
             <li>

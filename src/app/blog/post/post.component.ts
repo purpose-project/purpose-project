@@ -4,10 +4,13 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
+import { Entry } from 'contentful';
+
 import { PageTitleService } from '../../page-title.service';
 import { ContentfulService } from '../../contentful.service';
 import { Post } from '../post';
 import { PostService } from '../post.service';
+
 
 @Component({
   selector: 'app-post',
@@ -16,7 +19,7 @@ import { PostService } from '../post.service';
 })
 export class PostComponent implements OnInit {
 
-  post$: Observable<Post>;
+  post$: Observable<Entry<Post>>;
 
   constructor(
     private titleService: PageTitleService,
@@ -27,11 +30,12 @@ export class PostComponent implements OnInit {
   ngOnInit() {
     this.post$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
-        this.postService.getPost(params.get('id')))
+        this.postService.getPost(params.get('slug')))
     );
 
     this.post$.subscribe(post => {
       this.titleService.setTitle(post.fields.title);
+      this.titleService.setBackgroundImage(post.fields.backgroundImage.fields.file.url);
     });
   }
 

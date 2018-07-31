@@ -1,11 +1,12 @@
+import { Asset } from 'contentful';
+
 export interface Post {
-  fields: {
-    title: string;
-    body: string;
-    slug: string;
-    author: any[];
-    [property: string]: any;
-  };
+  title: string;
+  body: string;
+  slug: string;
+  author: any[];
+  backgroundImage: Asset;
+  [property: string]: any;
 
   sys: {
     createdAt: any; // this is a date time
