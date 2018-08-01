@@ -4,8 +4,8 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
-import { PageTitleService } from '../../page-title.service';
-import { ContentfulService } from '../../contentful.service';
+import { PageTitleService } from '../../../page-title.service';
+import { ContentfulService } from '../../../contentful.service';
 import { Post } from '../post';
 import { PostService } from '../post.service';
 

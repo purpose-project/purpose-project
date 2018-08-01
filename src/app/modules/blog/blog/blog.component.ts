@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PageTitleService } from '../../page-title.service';
+import { PageTitleService } from '../../../page-title.service';
 
 @Component({
   selector: 'app-blog',

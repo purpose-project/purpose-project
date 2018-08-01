@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { PageTitleService } from '../../page-title.service';
+import { PageTitleService } from '../../../page-title.service';
 import { PostService } from '../post.service';
 import { Post } from '../post';
 

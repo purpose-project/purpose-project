@@ -5,7 +5,7 @@ import { elementAt, map } from 'rxjs/operators';
 
 import { Entry } from 'contentful';
 
-import { ContentfulService } from '../contentful.service';
+import { ContentfulService } from '../../contentful.service';
 
 import { Post } from './post';
 
