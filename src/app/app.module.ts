@@ -7,7 +7,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
+import { SharedModule } from './modules/shared/shared.module';
 import { BeginModule } from './modules/begin/begin.module';
 import { BlogModule } from './modules/blog/blog.module';
 
