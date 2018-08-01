@@ -13,6 +13,7 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit() {
     this.pageTitleService.setTitle('Welcome');
+    this.pageTitleService.setBackgroundImage('https://source.unsplash.com/gD7KrKqYZFk/1600x900');
   }
 
 }

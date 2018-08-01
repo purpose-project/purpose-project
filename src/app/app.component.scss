@@ -46,38 +46,8 @@ mat-sidenav a {
 
 /* Left side */
 .container > .left {
-  background: url("https://source.unsplash.com/gD7KrKqYZFk/1600x900"), rgb(69, 69, 117);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  color: #fff;
   flex: 1;
   min-height: 300px;
-}
-
-.main-message {
-  font-size: 4em;
-  margin-left: .6em;
-}
-
-/* Social media icons */
-.social-media {
-  display: flex;
-}
-
-.social-media > li {
-  list-style: none;
-  margin: 4px;
-}
-
-.social-media > li > a {
-  color: white;
-}
-
-.fab:hover {
-  color: #D9D9D9;
 }
 
 /* Right side */

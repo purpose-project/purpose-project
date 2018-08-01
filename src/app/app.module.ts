@@ -12,12 +12,14 @@ import { BeginModule } from './begin/begin.module';
 import { BlogModule } from './blog/blog.module';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TitleComponent } from './title/title.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TitleComponent
   ],
   imports: [
     BrowserAnimationsModule,
