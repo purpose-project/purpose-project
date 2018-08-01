@@ -6,7 +6,7 @@ import { switchMap } from 'rxjs/operators';
 
 import { StepService } from './service/step.service';
 import { Step } from './service/step';
-import { PageTitleService } from '../../page-title.service';
+import { PageTitleService } from '../../../page-title.service';
 
 @Component({
   providers: [StepService],
