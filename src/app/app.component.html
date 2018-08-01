@@ -23,34 +23,7 @@
     <mat-sidenav-content>
       <div class="container">
         <div class="left">
-          <h1 class="main-message">{{ pageTitle$ | async }}</h1>
-          <ul class="social-media">
-            <li>
-              <a href="https://www.twitter.com" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com" target="_blank">
-                <i class="fab fa-facebook"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://plus.google.com/discover" target="_blank">
-                <i class="fab fa-google-plus-g"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.pinterest.com" target="_blank">
-                <i class="fab fa-pinterest"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.skype.com" targe="_blank">
-                <i class="fab fa-skype"></i>
-              </a>
-            </li>
-          </ul>
+          <app-title></app-title>
         </div>
         <div class="right">
           <router-outlet></router-outlet>

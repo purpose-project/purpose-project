@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PageTitleService } from './page-title.service';
 
@@ -7,12 +7,7 @@ import { PageTitleService } from './page-title.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  pageTitle$: Observable<string>;
+export class AppComponent {
 
-  constructor(private pageTitleService: PageTitleService) {}
-
-  ngOnInit() {
-    this.pageTitle$ = this.pageTitleService.title;
-  }
+  constructor() {}
 }
