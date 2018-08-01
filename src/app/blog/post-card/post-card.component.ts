@@ -20,9 +20,9 @@ export class PostCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.author = this.post.fields.author[0];
+    this.author = this.post.author[0];
     this.portrait = this.author.fields.portrait;
-    this.backgroundImage = this.post.fields.backgroundImage;
+    this.backgroundImage = this.post.backgroundImage;
     this.headerImage = {
       'background-image': 'url(' + this.portrait.fields.file.url + ')',
       'background-size': 'cover'

@@ -4,8 +4,6 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
-import { Entry } from 'contentful';
-
 import { PageTitleService } from '../../page-title.service';
 import { ContentfulService } from '../../contentful.service';
 import { Post } from '../post';
@@ -19,7 +17,7 @@ import { PostService } from '../post.service';
 })
 export class PostComponent implements OnInit {
 
-  post$: Observable<Entry<Post>>;
+  post$: Observable<Post>;
 
   constructor(
     private titleService: PageTitleService,
@@ -34,8 +32,8 @@ export class PostComponent implements OnInit {
     );
 
     this.post$.subscribe(post => {
-      this.titleService.setTitle(post.fields.title);
-      this.titleService.setBackgroundImage(post.fields.backgroundImage.fields.file.url);
+      this.titleService.setTitle(post.title);
+      this.titleService.setBackgroundImage(post.backgroundImage.fields.file.url);
     });
   }
 

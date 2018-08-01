@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { Entry } from 'contentful';
-
 import { PostService } from '../post.service';
 import { Post } from '../post';
 
@@ -15,7 +13,7 @@ import { Post } from '../post';
 export class CategoryComponent implements OnInit {
 
   constructor(private postService: PostService) { }
-  posts$: Observable<Entry<Post>[]>;
+  posts$: Observable<Post[]>;
 
   ngOnInit() {
     this.posts$ = this.postService.getPosts();

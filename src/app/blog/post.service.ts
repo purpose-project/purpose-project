@@ -17,12 +17,12 @@ export class PostService {
     private contentful: ContentfulService
   ) { }
 
-  public getPosts(): Observable<Entry<Post>[]> {
-    return new Observable<Entry<Post>[]>(observer => {
+  public getPosts(): Observable<Post[]> {
+    return new Observable<Post[]>(observer => {
       this.contentful.getEntries({content_type: 'post'}).subscribe(
         response => {
           if (response) {
-            observer.next(response as Entry<Post>[]);
+            observer.next(response.map(item => item.fields as Post));
             observer.complete();
           } else {
             observer.error(response);
@@ -35,16 +35,16 @@ export class PostService {
     });
   }
 
-  public getPost(slug: string): Observable<Entry<Post>> {
+  public getPost(slug: string): Observable<Post> {
     const query = {
       content_type: 'post',
       'fields.slug': slug
     };
-    return new Observable<Entry<Post>>(observer => {
+    return new Observable<Post>(observer => {
       this.contentful.getEntries(query).subscribe(
         response => {
           if (response) {
-            observer.next(response[0] as Entry<Post>);
+            observer.next(response[0].fields as Post);
             observer.complete();
           } else {
             observer.error(response);
