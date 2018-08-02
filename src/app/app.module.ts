@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { BeginModule } from './modules/begin/begin.module';
 import { BlogModule } from './modules/blog/blog.module';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TitleComponent } from './title/title.component';
@@ -28,7 +29,8 @@ import { TitleComponent } from './title/title.component';
     MatSidenavModule,
     BeginModule,
     BlogModule,
-    AppRoutingModule,
+    DashboardModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
