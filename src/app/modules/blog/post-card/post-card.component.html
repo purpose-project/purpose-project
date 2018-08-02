@@ -1,20 +1,22 @@
-<mat-card class="post-card">
-  <mat-card-header class="post-header">
-    <div mat-card-avatar [ngStyle]="headerImage"></div>
-    <mat-card-title>{{post.title}}</mat-card-title>
-    <mat-card-subtitle>{{author.fields.name}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image [src]="backgroundImage.fields.file.url" [alt]="backgroundImage.fields.title">
-  
-  <mat-card-content>
-    <p>
-      Preview for the post, so you know what you might read soon.
-      This is some more text to test out the space.
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <a mat-icon-button [routerLink]="['/post', post.slug]"><mat-icon>launch</mat-icon></a>
-    <button mat-icon-button><mat-icon>save_alt</mat-icon></button>
-    <button mat-icon-button><mat-icon>share</mat-icon></button>
-  </mat-card-actions>
-</mat-card>
+<div class="post-card-container">
+  <mat-card class="post-card">
+    <mat-card-header class="post-header">
+      <div mat-card-avatar [ngStyle]="headerImage"></div>
+      <mat-card-title>{{post.title}}</mat-card-title>
+      <mat-card-subtitle>{{author.fields.name}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="backgroundImage.fields.file.url" [alt]="backgroundImage.fields.title">
+    
+    <mat-card-content>
+      <p>
+        Preview for the post, so you know what you might read soon.
+        This is some more text to test out the space.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-icon-button [routerLink]="['/post', post.slug]"><mat-icon>launch</mat-icon></a>
+      <button mat-icon-button><mat-icon>save_alt</mat-icon></button>
+      <button mat-icon-button><mat-icon>share</mat-icon></button>
+    </mat-card-actions>
+  </mat-card>
+</div>
