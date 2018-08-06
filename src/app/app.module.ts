@@ -16,6 +16,7 @@ import { SharedModule } from './modules/shared/shared.module';
 import { BeginModule } from './modules/begin/begin.module';
 import { BlogModule } from './modules/blog/blog.module';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { LoginModule } from './modules/login/login.module';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TitleComponent } from './title/title.component';
@@ -37,7 +38,8 @@ import { TitleComponent } from './title/title.component';
     BeginModule,
     BlogModule,
     DashboardModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
