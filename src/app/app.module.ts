@@ -33,13 +33,13 @@ import { TitleComponent } from './title/title.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     SharedModule,
+    LoginModule,
     MatToolbarModule,
     MatSidenavModule,
     BeginModule,
     BlogModule,
     DashboardModule,
-    AppRoutingModule,
-    LoginModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
