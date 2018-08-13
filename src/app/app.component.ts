@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+
+import { AngularFireAuth } from 'angularfire2/auth';
+
 import { PageTitleService } from './page-title.service';
 
 @Component({
@@ -7,7 +10,17 @@ import { PageTitleService } from './page-title.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  constructor() {}
+  constructor(public afAuth: AngularFireAuth) { }
+
+  ngOnInit() {
+    this.loginAnonymously();
+  }
+
+  private loginAnonymously(): void {
+    this.afAuth.auth.signInAnonymously().catch(error => {
+      console.log(error.message);
+    });
+  }
 }
