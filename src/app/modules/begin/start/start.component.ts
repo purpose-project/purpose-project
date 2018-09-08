@@ -35,8 +35,6 @@ export class StartComponent implements OnInit {
   ngOnInit() {
     // Set page title
     this.pageTitleService.setTitle('Find your purpose');
-    // Get the step we are on
-    this.getStep();
     // Get user
     this.afAuth.user.subscribe(user => {
       if(user) {
@@ -50,12 +48,5 @@ export class StartComponent implements OnInit {
   public setStepResponse(val: string): void {
     let stepDoc = this.afFirestore.doc(`users/${this.user.uid}/goals/ideal_life`);
     stepDoc.set({data: val});
-  }
-
-  private getStep(): void {
-    this.step$ = this.route.paramMap.pipe(
-      switchMap((params: ParamMap) =>
-        this.stepService.getStep(params.get('id')))
-    );
   }
 }

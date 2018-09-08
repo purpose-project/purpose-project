@@ -1,8 +1,13 @@
-<div *ngIf="step$ | async as step">
-  <h2>{{step.header}}</h2>
-  <p class="welcome-message">{{ step.description }}</p>
+<div>
+  <h2>Step One: Brainstorm</h2>
+  <p class="welcome-message">
+    Take a few minutes to jot down your ideal life.
+    Try to be specific and don't worry,
+    you can always come back and make changes.
+    Focus on what is most important to your well-being
+    and growth.
+  </p>
   <textarea placeholder="Write here or in a journal, whichever you prefer."
-    rows="10" cols="49" #response>{{ (stepResponse$ | async)?.data }}</textarea>
-  <a appButton *ngIf="step.nextStep" (click)="setStepResponse(response.value)" routerLink="/getting-started/{{step.nextStep}}">Next</a>
-  <a appButton *ngIf="!step.nextStep" routerLink="/dashboard">Dashboard</a>
+    rows="10" cols="49" #response></textarea>
+  <a appButton (click)="setStepResponse(response.value)" routerLink="../goals">Next</a>
 </div>
