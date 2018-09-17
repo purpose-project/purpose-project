@@ -4,7 +4,7 @@ import { BeginRoutingModule } from './begin-routing.module';
 import { SharedModule } from '../shared/shared.module';
 
 import { BeginComponent } from './begin/begin.component';
-import { StartComponent } from './start/start.component';
+import { IdealLifeComponent } from './ideal_life/ideal-life.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { GoalsComponent } from './goals/goals.component';
 
@@ -15,7 +15,7 @@ import { GoalsComponent } from './goals/goals.component';
   ],
   declarations: [
     WelcomeComponent,
-    StartComponent,
+    IdealLifeComponent,
     GoalsComponent,
     BeginComponent
   ]

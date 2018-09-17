@@ -14,10 +14,10 @@ import { PageTitleService } from '../../../page-title.service';
 
 @Component({
   providers: [StepService],
-  templateUrl: './start.component.html',
-  styleUrls: ['./start.component.scss']
+  templateUrl: './ideal-life.component.html',
+  styleUrls: ['./ideal-life.component.scss']
 })
-export class StartComponent implements OnInit {
+export class IdealLifeComponent implements OnInit {
 
   private itemDoc: AngularFirestoreDocument<any>;
 
@@ -37,7 +37,7 @@ export class StartComponent implements OnInit {
     this.pageTitleService.setTitle('Find your purpose');
     // Get user
     this.afAuth.user.subscribe(user => {
-      if(user) {
+      if (user) {
         this.user = user;
       } else {
         console.log('no user logged in');
@@ -46,7 +46,7 @@ export class StartComponent implements OnInit {
   }
 
   public setStepResponse(val: string): void {
-    let stepDoc = this.afFirestore.doc(`users/${this.user.uid}/goals/ideal_life`);
+    const stepDoc = this.afFirestore.doc(`users/${this.user.uid}/goals/ideal_life`);
     stepDoc.set({data: val});
   }
 }
