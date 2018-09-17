@@ -1,8 +1,35 @@
-<div class="container">
-  <div class="split left">
-      <h1>PURPOSE <br>PROJECT</h1>
-  </div>
-  <div class="split right">
-      <router-outlet></router-outlet>
-  </div>
+<div class="app-container">
+  <mat-toolbar class="toolbar">
+    <button mat-icon-button>
+      <mat-icon aria-label="menu icon" (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <h4 class="title">PURPOSE PROJECT</h4>
+  </mat-toolbar>
+
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav [fixedInViewport]="true">
+      <nav id="primary-nav">
+        <ul>
+          <li>
+            <a routerLink="/blog" routerLinkActive="active" (click)="sidenav.toggle()">Blog</a>
+          </li>
+          <li>
+            <a routerLink="/about" routerLinkActive="active"(click)="sidenav.toggle()">About</a>
+          </li>
+        </ul>
+      </nav>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="container">
+        <div class="left">
+          <app-title></app-title>
+        </div>
+        <div class="right">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>

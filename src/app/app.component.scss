@@ -1,0 +1,76 @@
+.app-container {
+  font-family: Comfortaa, Arial, sans-serif;
+  height: 100%;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  height: 100%;
+}
+
+.toolbar {
+  position: fixed;
+  z-index: 1000;
+  background-color: transparent;
+  color: #fff;
+}
+
+mat-sidenav-container {
+  height: 100%;
+}
+
+/* Side nav */
+mat-sidenav {
+  width: 50%;
+  background: black;
+  padding: 64px 1em 1em;
+}
+
+#primary-nav {
+  font-size: 2.4rem;
+}
+
+/* List of links in sidenav */
+mat-sidenav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links inside sidenav */
+mat-sidenav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Left side */
+.container > .left {
+  flex: 1;
+  min-height: 300px;
+}
+
+/* Right side */
+.container > .right {
+  padding: 30px;
+  flex: 1;
+  overflow-y: auto;
+  font-family: Barlow, Arial, sans-serif;
+}
+
+/* Media queries */
+@media(max-width: 768px) {
+  .container {
+  flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  mat-sidenav {
+    width: 80%;
+  }
+}
