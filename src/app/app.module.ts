@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -15,9 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { BeginModule } from './modules/begin/begin.module';
-import { BlogModule } from './modules/blog/blog.module';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
-import { LoginModule } from './modules/login/login.module';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TitleComponent } from './title/title.component';
@@ -35,11 +32,9 @@ import { TitleComponent } from './title/title.component';
     AngularFireAuthModule,
     AngularFirestoreModule,
     SharedModule,
-    LoginModule,
     MatToolbarModule,
     MatSidenavModule,
     BeginModule,
-    BlogModule,
     DashboardModule,
     AppRoutingModule
   ],
