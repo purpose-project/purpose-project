@@ -4,12 +4,13 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { JournalComponent } from './journal/journal.component';
+import { GoalsListComponent } from './goals-list/goals-list.component';
 
 @NgModule({
   imports: [
     CommonModule,
     DashboardRoutingModule
   ],
-  declarations: [DashboardComponent, JournalComponent]
+  declarations: [DashboardComponent, JournalComponent, GoalsListComponent]
 })
 export class DashboardModule { }
