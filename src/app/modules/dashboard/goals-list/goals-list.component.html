@@ -1,5 +1,6 @@
-<div class="dGoals">
-  <p>
-    goals-list works!
-  </p>
-</div>
+<mat-list>
+  <mat-list-item *ngFor="let goal of goals">
+    <h4 matLine>{{ goal.goal }}</h4>
+    <p matLine>{{ goal.dueDate.toDateString() }}</p>
+  </mat-list-item>
+</mat-list>

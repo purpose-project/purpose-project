@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MatCardModule } from '@angular/material';
+import { MatCardModule, MatListModule } from '@angular/material';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -12,7 +12,8 @@ import { GoalsListComponent } from './goals-list/goals-list.component';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule
   ],
   declarations: [
     DashboardComponent,
